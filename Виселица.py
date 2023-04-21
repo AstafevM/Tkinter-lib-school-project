@@ -122,7 +122,6 @@ def run():
     win.geometry('505x185+500+250')
     win.title('Виселица')
     win.resizable(False, False)
-    win.iconphoto(False, PhotoImage(file='виселица.png'))
 
     Button(win, height=1, width=5, text='↻', command=reboot).grid(row=1, column=3)
     Button(win, height=1, width=5, text='exit', command=exit).grid(row=1, column=4)
