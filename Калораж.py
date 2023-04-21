@@ -74,7 +74,6 @@ win = tk.Tk()
 win.geometry("396x400+350+25")
 win.title('Каллораж')
 win.resizable(False, False)
-win.iconphoto(False, tk.PhotoImage(file='калораж.png'))
 
 InputFrame = ttk.Frame(win, relief='solid', borderwidth=5, width=50, height=50)
 InputFrame.pack(anchor='nw', pady=6, padx=6)
