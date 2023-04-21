@@ -92,7 +92,6 @@ win.title('Калькулятор')
 win.geometry("265x585")
 win.resizable(False, False)
 win.config(bg='black')
-win.iconphoto(False, PhotoImage(file='калькулятор.png'))
 
 entry1 = Entry(win, width=45, justify='right', bg='black', fg='white')
 entry1.pack()
