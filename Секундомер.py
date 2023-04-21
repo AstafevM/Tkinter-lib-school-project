@@ -36,7 +36,6 @@ win = tk.Tk()
 win.title('Секундомер')
 win.geometry("400x200")
 win.resizable(False, False)
-win.iconphoto(False, tk.PhotoImage(file='stopwatch.png'))
 
 stopwatch_label = tk.Label(win, height=1, width=7, font=('Times New Roman', 35), text='00:00')
 stopwatch_label.pack(side="left", padx=20)
