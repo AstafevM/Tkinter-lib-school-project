@@ -9,12 +9,12 @@ def all_clean():
     entry2.delete(0, END)
 
 def result():
-    if '/0' in entry1.get() and not'/0.' in entry1.get():
+    try:
         entry2.delete(0, END)
-        entry2.insert(0, 'ОШИБКА: деление на ноль')
-    else:
+        entry2.insert(1110, str(eval(entry1.get())))
+    except:
         entry2.delete(0, END)
-        entry2.insert(0, str(eval(entry1.get())))
+        entry2.insert(1110, 'Ошибка рассчёта')
 
 win = Tk()
 win.title('Калькулятор')
