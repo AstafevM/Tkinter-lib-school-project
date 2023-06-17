@@ -20,7 +20,12 @@ def calculation():
     heavy_phys_labor = float(InputEntryHeavPhysLabor.get())
     very_heavy_phys_labor = float(InputEntryVeryHeavPhysLabor.get())
 
-    dela = [sleep, light_activity, light_labor, mid_heavy_labor, heavy_phys_labor, very_heavy_phys_labor]
+    osnovnoy_obmen = None
+    obshiy_obmen = None
+    proteins = None
+    fats = None
+
+    day_activity = [sleep, light_activity, light_labor, mid_heavy_labor, heavy_phys_labor, very_heavy_phys_labor]
 
     lean_mass = weight * not_fat_percent
     fat_mass = weight - lean_mass
@@ -38,7 +43,7 @@ def calculation():
     rashod_otdyha = osnovnoy_obmen/24
     print(rashod_otdyha)
 
-    if sum(dela) == 24:
+    if sum(day_activity) == 24:
         obshiy_obmen=sleep*rashod_otdyha+1.4*light_activity*rashod_otdyha+1.6*light_labor*rashod_otdyha+1.9*mid_heavy_labor*rashod_otdyha+2.2*heavy_phys_labor*rashod_otdyha+2.5*very_heavy_phys_labor*rashod_otdyha+4.5*fat_mass
         print(int(obshiy_obmen))
 
@@ -62,13 +67,13 @@ def calculation():
     OutputEntryObshiyObmen.insert(0, str(int(obshiy_obmen)))
 
     OutputEntryProtein.delete(0, 'end')
-    OutputEntryProtein.insert(0, int(proteins))
+    OutputEntryProtein.insert(0, str(int(proteins)))
 
     OutputEntryFat.delete(0, 'end')
-    OutputEntryFat.insert(0, int(fats))
+    OutputEntryFat.insert(0, str(int(fats)))
 
     OutputEntryCarbohydrat.delete(0, 'end')
-    OutputEntryCarbohydrat.insert(0, int(carbohydrates))
+    OutputEntryCarbohydrat.insert(0, str(int(carbohydrates)))
 
 win = tk.Tk()
 win.geometry("396x400+350+25")
